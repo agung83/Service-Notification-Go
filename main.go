@@ -7,6 +7,10 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
+/*
+* TODO HANDLE CLEAN ARCHITECTURE AND RESPOSITORY PATTERN
+ */
+
 func main() {
     app := setupRouter()
 
