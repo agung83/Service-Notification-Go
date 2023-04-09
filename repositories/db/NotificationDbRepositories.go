@@ -1,7 +1,7 @@
 package dbrepositories
 
 import (
-	"gorm.io/gorm"
+	"serviceNotification/models"
 )
 
 
@@ -14,10 +14,11 @@ type Categories struct {
   /*
   * TODO HANDLE WITH MODEL AND MIGRATION
   */
-func GetAllNotification(db *gorm.DB) []Categories {
+func GetAllNotification() []Categories {
 	/*
 	* this is sample for use raw query
 	*/
+	db := models.SetupDatabase()
 	var result []Categories   
     db.Raw("SELECT * FROM categories").Scan(&result)
 	return result
